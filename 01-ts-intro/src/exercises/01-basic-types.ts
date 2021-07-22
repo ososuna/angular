@@ -1,8 +1,8 @@
 
-let nombre = 'Strider';
+let userName = 'Strider';
 let hp: number | string = 95;
 let isAlive: boolean = true;
 
 hp = 'FULL';
 
-console.log( nombre, hp, isAlive );
+console.log( userName, hp, isAlive );
