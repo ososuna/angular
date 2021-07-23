@@ -1,5 +1,5 @@
 
-interface Product {
+export interface Product {
     desc: string;
     price: number;
 }
@@ -14,7 +14,7 @@ const laptop: Product = {
     price: 20000
 }
 
-function calculateISV( products: Product[] ): [number, number] {
+export function calculateISV( products: Product[] ): [number, number] {
     
     let total = 0;
 
@@ -26,9 +26,9 @@ function calculateISV( products: Product[] ): [number, number] {
 
 }
 
-const articles = [ phone, laptop ];
+// const articles = [ phone, laptop ];
 
-const [total, isv] = calculateISV( articles );
+// const [total, isv] = calculateISV( articles );
 
-console.log( `Total: ${total}` );
-console.log( `ISV: ${ isv }` );
+// console.log( `Total: ${total}` );
+// console.log( `ISV: ${ isv }` );
