@@ -23,16 +23,4 @@ export class MainComponent {
     power: 0
   }
 
-  add(): void {
-    if ( this.newCharacter.name.trim().length === 0 ) return;
-  
-    this.characters.push( this.newCharacter );
-
-    this.newCharacter = {
-      name: '',
-      power: 0
-    };
-
-  }
-
 }

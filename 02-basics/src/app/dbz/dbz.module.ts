@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { MainComponent } from './main/main.component';
 import { CharactersComponent } from './characters/characters.component';
+import { AddComponent } from './add/add.component';
 
 @NgModule({
   declarations: [
     MainComponent,
-    CharactersComponent
+    CharactersComponent,
+    AddComponent
   ],
   exports: [
     MainComponent
