@@ -23,4 +23,8 @@ export class MainComponent {
     power: 0
   }
 
+  addNewCharacter( character: Character ) {
+    this.characters.push( character );
+  }
+
 }

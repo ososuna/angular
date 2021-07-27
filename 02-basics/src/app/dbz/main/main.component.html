@@ -9,7 +9,11 @@
 
     <div class="col">
         <!-- Add Component -->
-        <app-add [characters]="characters" [newCharacter]="newCharacter"></app-add>
+        <app-add
+            [newCharacter]="newCharacter"
+            (onNewCharacter)="addNewCharacter( $event )"
+        >
+        </app-add>
     </div>
 
 </div>
