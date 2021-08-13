@@ -8,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ByCountryComponent implements OnInit {
 
+  term: string = 'Hello World';
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  search(): void {
+    console.log( this.term );
   }
 
 }
