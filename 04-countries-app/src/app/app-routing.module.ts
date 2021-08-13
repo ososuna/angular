@@ -4,7 +4,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { ByCapitalComponent } from "./country/pages/by-capital/by-capital.component";
 import { ByCountryComponent } from "./country/pages/by-country/by-country.component";
 import { ByRegionComponent } from './country/pages/by-region/by-region.component';
-import { WatchCountryComponent } from "./country/pages/watch-country/watch-country.component";
+import { ShowCountryComponent } from "./country/pages/watch-country/show-country.component";
 
 const routes: Routes = [
     {
@@ -22,7 +22,7 @@ const routes: Routes = [
     },
     {
         path: 'country/:id',
-        component: WatchCountryComponent
+        component: ShowCountryComponent
     },
     {
         path: '**',

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ByCapitalComponent } from './pages/by-capital/by-capital.component';
 import { ByCountryComponent } from './pages/by-country/by-country.component';
 import { ByRegionComponent } from './pages/by-region/by-region.component';
-import { WatchCountryComponent } from './pages/watch-country/watch-country.component';
+import { ShowCountryComponent } from './pages/watch-country/show-country.component';
 
 
 
@@ -12,13 +12,13 @@ import { WatchCountryComponent } from './pages/watch-country/watch-country.compo
     ByCapitalComponent,
     ByCountryComponent,
     ByRegionComponent,
-    WatchCountryComponent
+    ShowCountryComponent
   ],
   exports: [
     ByCapitalComponent,
     ByCountryComponent,
     ByRegionComponent,
-    WatchCountryComponent
+    ShowCountryComponent
   ],
   imports: [
     CommonModule
