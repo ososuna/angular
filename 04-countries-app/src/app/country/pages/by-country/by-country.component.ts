@@ -31,4 +31,9 @@ export class ByCountryComponent  {
 
   }
 
+  suggestions( term: string ) {
+    this.error = false;
+    // TODO: create suggestions
+  }
+
 }
