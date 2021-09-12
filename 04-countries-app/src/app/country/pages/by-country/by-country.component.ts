@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CountryService } from '../../services/country.service';
 import { Country } from '../../interfaces/country.interface';
 
@@ -13,7 +13,7 @@ export class ByCountryComponent  {
   term: string = '';
   error: boolean = false;
   countries: Country[] = [];
-
+  
   constructor( private countryService: CountryService ) { }
 
   search( term: string ): void {
