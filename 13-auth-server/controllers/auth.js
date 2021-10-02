@@ -1,4 +1,4 @@
-const { request, response } = require('express');
+const { request, response, json } = require('express');
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const { generateJWT } = require('../helpers/jwt');
@@ -45,13 +45,43 @@ const createUser = async(req = request, res = response) => {
     }
 }
 
-const loginUser = (req = request, res = respose) => {
+const loginUser = async(req = request, res = respose) => {
 
     const { email, password } = req.body;
 
-    return res.json({
-        msg: 'Login user'
-    });
+    try {
+        
+        const dbUser = await User.findOne({ email });
+
+        if ( !dbUser ) {
+            return res.status(400).json({
+                msg: 'Invalid email or password'
+            });
+        }
+
+        const validPassword = bcrypt.compareSync( password, dbUser.password );
+
+        if ( !validPassword ) {
+            return res.status(400).json({
+                msg: 'Invalid email or password'
+            });
+        }
+
+        const token = await generateJWT( dbUser.id, dbUser.name );
+
+        return res.json({
+            uid: dbUser.id,
+            name: dbUser.name,
+            token
+        });
+
+    } catch ( error ) {
+        console.log( error );        
+        return res.status(500).json({
+            msg: 'Please talk to the admin'
+        });
+    }
+
 
 }
 
